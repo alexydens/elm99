@@ -9,8 +9,10 @@
 
 int main() {
   arena_t arena = create_arena(NULL, 1024 * 4);
-  str_t string = string_from(&arena, "...!!!...!!!");
-  file_append_string("copy_of_makefile", string);
+  str_t string = string_file(&arena, ".ccls");
+  printf("::");
+  print_string(string);
+  printf("\n");
 
   arena_free(&arena);
   return 0;

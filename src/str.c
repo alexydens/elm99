@@ -93,7 +93,7 @@ void file_append_string(const char* path, const str_t string) {
 }
 /* Print a string */
 void print_string(const str_t string) {
-  write(STDIN_FILENO, string.ptr, string.size);
+  printf("%.*s", string.size, string.ptr);
 }
 
 /* Compare two strings bool is equal */
