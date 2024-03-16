@@ -121,6 +121,11 @@ enum { false, true };
 #define LERP(A, B, X)       ((A) < (B)) ? \
                             ((A) + ((B)-(A)*(X))) \
                             : ((A) + ((A)-(B)*(X)))
+/* Turn to string */
+#define STR(A)              (#A)
+/* Concatenate */
+#define CONCAT(A, B)        (A##B)
+
 /* Assertions */
 #ifdef ENABLE_ASSERT
 #ifndef ASSERT_ONFAIL
